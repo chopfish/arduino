@@ -25,14 +25,16 @@ void loop()
 {
   int x;
   int ar[x];
-  for(x=1; x<32; x++)
+  for(x=1; x<32; x++) // array length
   { 
-    for(int y=0; y<x; y++)
+    for(int y=0; y<x; y++) // random for each index
     {
-      int a=(int)(random(1,4));
+      int a=(int)(random()*4+1);
       ar[y]=a;
     }
-    if(ar[x]==1)
+    
+  }
+  if(ar[x]==1) // if int at index x == 1, then turn on led1 
     {
       digitalWrite(LED1, HIGH);
       delay(500);
@@ -56,10 +58,7 @@ void loop()
       delay(500);
       digitalWrite(LED4,LOW);
     }
-    delay (2000);
-  }
   
-    Serial.print(ar[x]);
  
 }
 
