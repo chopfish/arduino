@@ -32,3 +32,6 @@ void loop() {
     digitalWrite(ledPins[thisPin], LOW);
   }
 }
+
+int array[] = {};
+http://arduino.cc/en/Reference/array
