@@ -6,6 +6,7 @@ int led3 = 11;
 int button3 = 5;
 int led4 = 11;
 int button4 = 4;
+int array = [];
 
 // the setup function runs once when you press reset or power the board
 void setup() 
@@ -25,29 +26,30 @@ void setup()
 void loop() 
 {  
   int x=(int)(random()*3+1); //1-4
+  
   if(x==1)
   {
-    digitalWrite(LED1,HIGH);
+    digitalWrite(led,HIGH);
     delay(500);
-    digitalWrite(LED1, LOW);
+    digitalWrite(led, LOW);
   }
   else if(x==2)
   {
-    digitalWrite(LED2,HIGH);
+    digitalWrite(led2,HIGH);
     delay(500);
-    digitalWrite(LED2, LOW);
+    digitalWrite(led2, LOW);
   }
   else if(x==3)
   {
-    digitalWrite(LED3,HIGH);
+    digitalWrite(led3,HIGH);
     delay(500);
-    digitalWrite(LED3, LOW);
+    digitalWrite(led3, LOW);
   }
   if(x==4)
   {
-    digitalWrite(LED4,HIGH);
+    digitalWrite(led4,HIGH);
     delay(500);
-    digitalWrite(LED4, LOW);
+    digitalWrite(led4, LOW);
   }
 }
 
