@@ -42,94 +42,63 @@ void loop()
       delay(500);
       digitalWrite(LED3,LOW);
   }
+//  --------------------- new code
+    for (int y=turn; y <= turn; y++)
+    { //Limited by the turn variable
+      Serial.println(""); //Some serial output to follow along
+      Serial.print("Turn: ");
+      Serial.print(y);
+      Serial.println("");
+      randomArray[y] = random(1, 5); //Assigning a random number (1-4) to the randomArray[y], y being the turn count
+      for (int x=0; x <= turn; x++)
+      {
+        Serial.print(randomArray[x]);
+      
+        for(int y=0; y<4; y++)
+        {
+      
+          if (randomArray[x] == 1 && ledpin[y] == 8) 
+          {  //if statements to display the stored values in the array
+            digitalWrite(ledpin[y], HIGH);
+            speakerpin.play(NOTE_G3, 100);
+            delay(400);
+            digitalWrite(ledpin[y], LOW);
+            delay(100);
+          }
+
+          if (randomArray[x] == 2 && ledpin[y] == 9) 
+          {
+            digitalWrite(ledpin[y], HIGH);
+            speakerpin.play(NOTE_A3, 100);
+            delay(400);
+            digitalWrite(ledpin[y], LOW);
+            delay(100);
+          }
   
-  /*
-  if(digitalRead(6)==HIGH)
-  {
-     digitalWrite(LED1,HIGH);
-     
-  }
-  else
-  {
-    digitalWrite(LED1,LOW);
-  }
-  *.
-  
-  //int x=(int) (random(1,4));
-  /*
-  if(x[pos]==1)
-  {
-    digitalWrite(LED1,HIGH);  
-  }
-  else if(x[pos]==2)
-  {
-    digitalWrite(LED2, HIGH);
-  }
-  else if(x[pos]==3)
-  {
-    digitalWrite(LED3,HIGH);
-  }
-  else if(x[pos]==4)
-  {
-    digitalWrite(LED4,HIGH);
-  }
- delay (1000);
-  digitalWrite(LED2,LOW);
-  digitalWrite(LED3,LOW);
-  digitalWrite(LED1,LOW);
-  digitalWrite(LED4, LOW);
-  pos++;*/
- //delay (1000);
-  
-  
-  /* 
-  int x;
-  int ar[31];
-  boolean play=true;
-  Serial.print("hello");
-  while(play)
-  {
-    x=0;
-    for(;x<31;x++)
-    {
-      ar[x]=random(1,5);
-      Serial.print(ar[x]);
+          if (randomArray[x] == 3 && ledpin[y] == 10) 
+          {
+            digitalWrite(ledpin[y], HIGH);
+            speakerpin.play(NOTE_B3, 100);
+            delay(400);
+            digitalWrite(ledpin[y], LOW);
+            delay(100);
+          }
+
+          if (randomArray[x] == 4 && ledpin[y] == 11) 
+          {
+            digitalWrite(ledpin[y], HIGH);
+            speakerpin.play(NOTE_C4, 100);
+            delay(400);
+            digitalWrite(ledpin[y], LOW);
+            delay(100);
+          }
+        }
+      }
     }
-    if(ar[x]==1) // if int at index x == 1, then turn on led1 
-    {
-      digitalWrite(LED1, HIGH);
-      delay(500);
-      digitalWrite(LED1,LOW);
-    }
-    else if(ar[x]==2)
-    {
-      digitalWrite(LED2, HIGH);
-      delay(500);
-      digitalWrite(LED2,LOW);
-    }
-    else if(ar[x]==3)
-    {
-      digitalWrite(LED3, HIGH);
-      delay(500);
-      digitalWrite(LED3,LOW);
-    }
-    else
-    {
-      digitalWrite(LED4, HIGH);
-      delay(500);
-      digitalWrite(LED4,LOW);
-    }
-    
-    delay (500); // pause- user input button
-    
-    
-   
-    for(; x<31 ; x++)
-   {
-     
-    
-   } 
-  }*/
+    input();
+  }
+}
+ // ----------------- end of new code 
   
 }
 
