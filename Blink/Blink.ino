@@ -23,7 +23,7 @@ void setup()
 }
 void loop()
 {
-   for(int x=1; x<16; x++)
+  for(int x=1; x<31; x++)
   { 
     int ar[x];
     for(int y=0; y<x; y++)
@@ -31,8 +31,35 @@ void loop()
       int a=(int)(random(1,4));
       ar[y]=a;
     }
+    if(ar[x]==1)
+    {
+      digitalWrite(LED1, HIGH);
+      delay(500);
+      digitalWrite(LED1,LOW);
+    }
+     if(ar[x]==2)
+    {
+      digitalWrite(LED2, HIGH);
+      delay(500);
+      digitalWrite(LED2,LOW);
+    }
+     if(ar[x]==3)
+    {
+      digitalWrite(LED3, HIGH);
+      delay(500);
+      digitalWrite(LED3,LOW);
+    }
+    else
+    {
+      digitalWrite(LED4, HIGH);
+      delay(500);
+      digitalWrite(LED4,LOW);
+    }
   }
-    
+  
+ 
 }
+
+
 
 
