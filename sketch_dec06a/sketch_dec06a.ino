@@ -1,11 +1,17 @@
-int led = 13;
-void setup() {                
-  pinMode(led, OUTPUT);     
+int ledPin = 13; // choose the pin for the LED
+int inPin = 7;   // choose the input pin (for a pushbutton)
+int val = 0;     // variable for reading the pin status
+
+void setup() {
+  pinMode(ledPin, OUTPUT);  // declare LED as output
+  pinMode(inPin, INPUT);    // declare pushbutton as input
 }
 
-void loop() {
-  digitalWrite(led, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(1000);               // wait for a second
-  digitalWrite(led, LOW);    // turn the LED off by making the voltage LOW
-  delay(1000);               // wait for a second
+void loop(){
+  val = digitalRead(inPin);  // read input value
+  if (val == HIGH) {         // check if the input is HIGH (button released)
+    digitalWrite(ledPin, LOW);  // turn LED OFF
+  } else {
+    digitalWrite(ledPin, HIGH);  // turn LED ON
+  }
 }
