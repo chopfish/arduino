@@ -32,19 +32,19 @@ void loop()
       int a=(int)(random(1,4));
       ar[y]=a;
     }
-     if(ar[x]==1)
+    if(ar[x]==1)
     {
       digitalWrite(LED1, HIGH);
       delay(500);
       digitalWrite(LED1,LOW);
     }
-     if(ar[x]==2)
+    else if(ar[x]==2)
     {
       digitalWrite(LED2, HIGH);
       delay(500);
       digitalWrite(LED2,LOW);
     }
-     if(ar[x]==3)
+    else if(ar[x]==3)
     {
       digitalWrite(LED3, HIGH);
       delay(500);
