@@ -28,7 +28,7 @@ void loop(){
  Serial.println("cm");
  delay(500);
   
-if(distance < 30)
+if(distance < 20)
  {
    digitalWrite(LED1, HIGH);
    digitalWrite(LED2, HIGH);
@@ -63,7 +63,7 @@ if(distance < 30)
 //insert kelly's work
  }
   else {
-    
+    digitalWrite(LED3, HIGH);
     //play demo
        }
            }//end loop
