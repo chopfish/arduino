@@ -22,6 +22,7 @@ void setup()
   pinMode(BUTTON3, INPUT);
   pinMode(LED4, OUTPUT);
   pinMode(BUTTON4, INPUT);
+  
   for(; pos<lim;pos++)
   {
     lightSeq[pos]=random(1,5);  
@@ -34,30 +35,16 @@ void setup()
   digitalWrite(LED3,HIGH);
 }
 
-void loop()
-{
-  
-  if(digitalRead(7)==HIGH) {
-      digitalWrite(LED2,HIGH);
-      delay(500);
-      digitalWrite(LED3,LOW);
-  }
 //  --------------------- new code
     for (int y=turn; y <= turn; y++)
-    { //Limited by the turn variable
-      Serial.println(""); //Some serial output to follow along
-      Serial.print("Turn: ");
-      Serial.print(y);
-      Serial.println("");
       randomArray[y] = random(1, 5); //Assigning a random number (1-4) to the randomArray[y], y being the turn count
       for (int x=0; x <= turn; x++)
       {
         Serial.print(randomArray[x]);
-      
         for(int y=0; y<4; y++)
         {
       
-          if (randomArray[x] == 1 && ledpin[y] == 8) 
+          if (randomArray[x] == 1 && ledpin[y] == 13) 
           {  //if statements to display the stored values in the array
             digitalWrite(ledpin[y], HIGH);
             speakerpin.play(NOTE_G3, 100);
@@ -66,7 +53,7 @@ void loop()
             delay(100);
           }
 
-          if (randomArray[x] == 2 && ledpin[y] == 9) 
+          if (randomArray[x] == 2 && ledpin[y] == 12) 
           {
             digitalWrite(ledpin[y], HIGH);
             speakerpin.play(NOTE_A3, 100);
@@ -75,7 +62,7 @@ void loop()
             delay(100);
           }
   
-          if (randomArray[x] == 3 && ledpin[y] == 10) 
+          if (randomArray[x] == 3 && ledpin[y] == 11) 
           {
             digitalWrite(ledpin[y], HIGH);
             speakerpin.play(NOTE_B3, 100);
@@ -84,7 +71,7 @@ void loop()
             delay(100);
           }
 
-          if (randomArray[x] == 4 && ledpin[y] == 11) 
+          if (randomArray[x] == 4 && ledpin[y] == 10) 
           {
             digitalWrite(ledpin[y], HIGH);
             speakerpin.play(NOTE_C4, 100);
