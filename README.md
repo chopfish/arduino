@@ -1,5 +1,3 @@
-arduino
-=======
+simon that works with ultrasonic and displays score in binary 
 
-for local hack day
-1. http://arduino.cc/en/Tutorial/Blink?from=Tutorial.BlinkingLED
+-for local hack day with the young hackers
