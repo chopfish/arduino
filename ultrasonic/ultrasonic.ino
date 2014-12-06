@@ -1,7 +1,7 @@
 
 // Ultrasonic sensor to start game
 
-
+#define MAX_DISTANCE 200
 int LED1 = 13;
 int LED2 = 12;
 int LED3 = 11;
@@ -18,7 +18,7 @@ void setup(){
 void loop(){
  int duration, distance;
  digitalWrite(trigPin, LOW); // start of wave proccess
- delayMicroseconds(1000); // = 1 millisecond delay
+ delayMicroseconds(500); // = 1 millisecond delay
  digitalWrite(trigPin, HIGH); // sends out first wave
  delayMicroseconds(1000);
  digitalWrite(trigPin, LOW); 
@@ -27,8 +27,8 @@ void loop(){
  Serial.print(distance);
  Serial.println("cm");
  delay(500);
-  
-if(distance < 20)
+ 
+ if(distance < 20)
  {
    digitalWrite(LED1, HIGH);
    digitalWrite(LED2, HIGH);
@@ -67,5 +67,3 @@ if(distance < 20)
     //play demo
        }
            }//end loop
-
-
