@@ -24,7 +24,7 @@ void setup()
 void loop()
 {
   int x;
-  int ar[x];
+  int ar[31];
   for(x=1; x<32; x++) // array length
   { 
     for(int y=0; y<x; y++) // random for each index
