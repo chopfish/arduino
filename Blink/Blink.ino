@@ -29,18 +29,26 @@ void loop()
   if(x==1)
   {
     digitalWrite(LED1,HIGH);
+    delay(500);
+    digitalWrite(LED1, LOW);
   }
   else if(x==2)
   {
     digitalWrite(LED2,HIGH);
+    delay(500);
+    digitalWrite(LED2, LOW);
   }
   else if(x==3)
   {
     digitalWrite(LED3,HIGH);
+    delay(500);
+    digitalWrite(LED3, LOW);
   }
   if(x==4)
   {
     digitalWrite(LED4,HIGH);
+    delay(500);
+    digitalWrite(LED4, LOW);
   }
 }
 
