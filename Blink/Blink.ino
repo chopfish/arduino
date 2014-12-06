@@ -21,34 +21,18 @@ void setup()
   pinMode(BUTTON4, INPUT);
   
 }
-
-// the loop function runs over and over again forever
-void loop() 
-{  
-  int x=(int)(random()*3+1); //1-4
-  if(x==1)
-  {
-    digitalWrite(LED1,HIGH);
-    delay(500);
-    digitalWrite(LED1, LOW);
+void loop()
+{
+   for(int x=1; x<16; x++)
+  { 
+    int ar[x];
+    for(int y=0; y<x; y++)
+    {
+      int a=(int)(random(1,4));
+      ar[y]=a;
+    }
   }
-  else if(x==2)
-  {
-    digitalWrite(LED2,HIGH);
-    delay(500);
-    digitalWrite(LED2, LOW);
-  }
-  else if(x==3)
-  {
-    digitalWrite(LED3,HIGH);
-    delay(500);
-    digitalWrite(LED3, LOW);
-  }
-  if(x==4)
-  {
-    digitalWrite(LED4,HIGH);
-    delay(500);
-    digitalWrite(LED4, LOW);
-  }
+    
 }
+
 
