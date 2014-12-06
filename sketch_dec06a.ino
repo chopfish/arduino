@@ -6,7 +6,7 @@ int led3 = 11;
 int button3 = 5;
 int led4 = 11;
 int button4 = 4;
-int array = [];
+int array[] = {};
 
 // the setup function runs once when you press reset or power the board
 void setup() 
@@ -19,7 +19,6 @@ void setup()
   pinMode(button3, INPUT);
   pinMode(led4, OUTPUT);
   pinMode(button4, INPUT);
-  
 }
 
 // the loop function runs over and over again forever
