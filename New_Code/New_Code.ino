@@ -11,7 +11,7 @@ int lightSeq[30];
 int pos=0;
 int lim=1;
 boolean play=true;
-int buttonSeq[
+int buttonSeq;
 void setup() 
 {
   pinMode(LED1, OUTPUT);
